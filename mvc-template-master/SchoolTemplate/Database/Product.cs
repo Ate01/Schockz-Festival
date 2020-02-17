@@ -3,7 +3,7 @@
 namespace SchoolTemplate.Database
 {
   public class Product
-  {
+    {
     public int Id { get; set; }
     
     public string Naam { get; set; }
