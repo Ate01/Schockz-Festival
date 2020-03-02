@@ -19,10 +19,8 @@ namespace SchoolTemplate.Controllers
             // uncomment deze regel om producten uit je database toe te voegen
             //products = GetProducts();
 
-            return View(products);
-        }
-
-        private List<Product> GetProducts()
+            return View(GetFestivals());
+        }       
 
         private List<Festival> GetFestivals()
         {
@@ -41,9 +39,10 @@ namespace SchoolTemplate.Controllers
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["Naam"].ToString(),
-
+                            Beschrijving = reader["Beschrijving"].ToString(),
+                            Datum = DateTime.Parse(reader["Datum"].ToString()),
                         };
-                        festivals.Add(p);
+                        festivals.Add(f);
                     }
                 }
             }
