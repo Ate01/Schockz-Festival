@@ -56,9 +56,11 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-        [Route("show-all")]
-        public IActionResult ShowAll()
+        [Route("festival/{id}")]
+        public IActionResult Festival(string id)
         {
+            ViewData["id"] = id;
+
             return View();
         }
 
