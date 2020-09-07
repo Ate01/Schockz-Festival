@@ -70,6 +70,15 @@ namespace SchoolTemplate.Controllers
         {
             return View();
         }
+        
+        [Route("contact")]
+        [HttpPost]
+        public IActionResult Contact(string firstname, string lastname)
+        {
+            ViewData["First name"] = firstname;
+            ViewData["Last name"] = lastname;
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
