@@ -73,17 +73,17 @@ namespace SchoolTemplate.Controllers
         
         [Route("contact")]
         [HttpPost]
-        public IActionResult Contact(string firstname, string lastname)
+        public IActionResult Contact(string voornaam, string achternaam)
         {
-            ViewData["First name"] = firstname;
-            ViewData["Last name"] = lastname;
+            ViewData["voornaam"] = voornaam;
+            ViewData["achternaam"] = achternaam;
             return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });  
         }
     }
 }
