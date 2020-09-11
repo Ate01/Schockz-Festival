@@ -1,14 +1,16 @@
 ﻿@using SchoolTemplate.Database;
-@model List<Festival>
+@model PersonModel
 @{
     ViewData["Title"] = "contact";
 }
 <h1>Contact</h1>
 
+@if (Model != null) {
 <p>
     Your first name is @ViewData["voornaam"] <br />
     Your last name is @ViewData["achternaam"] <br />
 </p>
+}
 
 <form method="post">
     <input type="text" name="voornaam" placeholder="Voornaam" />
