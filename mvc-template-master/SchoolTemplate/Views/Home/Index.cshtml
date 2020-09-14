@@ -4,11 +4,3 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <ul>
-        @foreach (Festival p in Model)
-        {
-            <li><a href="/festival/@p.Id">@p.Naam</a></li>
-        }
-    </ul>
-</div>
