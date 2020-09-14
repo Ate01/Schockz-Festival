@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SchoolTemplate.Models
 {
@@ -6,7 +7,12 @@ namespace SchoolTemplate.Models
     {
         public string voornaam{ get; set; }
 
+        [Required]
         public string achternaam { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string email { get; set; }
 
         public DateTime geboortedatum { get; set; }
     }
