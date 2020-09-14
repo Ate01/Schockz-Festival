@@ -61,7 +61,7 @@ body {
 }
 
 ul {
-    background-color: #c3c3c3;
+    background-color: #82b6e9;
     border-width: 1px 0;
     list-style: none;
     margin: 0;
@@ -74,10 +74,11 @@ li {
 }
 
     li a {
-        color: #000;
+        color: #002681;
         text-decoration: none;
         display: inline-block;
-        padding: 10px;
+        padding: 30px 65px;
+        font-size: 20px;
     }
 
 img,figure {
