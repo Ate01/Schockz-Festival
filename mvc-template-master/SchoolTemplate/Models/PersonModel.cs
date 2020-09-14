@@ -7,11 +7,11 @@ namespace SchoolTemplate.Models
     {
         public string voornaam{ get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Achternaam is verplicht / Last name is required")]
         public string achternaam { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Mailadres is verplicht / E-mail adress is required")]
+        [EmailAddress(ErrorMessage = "Ongeldige mailadres / E-mail adress invalid")]
         public string email { get; set; }
 
         public DateTime geboortedatum { get; set; }
