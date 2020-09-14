@@ -73,6 +73,10 @@ li {
     display: inline;
 }
 
+    li a:hover {
+        font-size: 18px;
+    }
+
     li a {
         color: #002681;
         text-decoration: none;
