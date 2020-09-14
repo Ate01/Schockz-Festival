@@ -54,6 +54,8 @@ namespace SchoolTemplate.Controllers
 
             SavePerson(model);
 
+            ViewData["formsuccess"] = "ök";
+
             return View();
         }
 
