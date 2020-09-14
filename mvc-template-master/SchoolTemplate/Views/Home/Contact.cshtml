@@ -5,6 +5,11 @@
 }
 <h1>Contact</h1>
 
+@if(ViewData["formsuccess"] == "ök")
+{
+    <p>Gelukt! Bedankt voor het invullen! / Success! Thanks for filling in!</p>
+}
+
 @if (Model != null) {
 <p>
     Your first name is @ViewData["voornaam"] <br />
