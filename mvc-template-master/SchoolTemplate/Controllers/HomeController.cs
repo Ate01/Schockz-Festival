@@ -22,6 +22,47 @@ namespace SchoolTemplate.Controllers
             return View(GetFestivals());
         }       
 
+        
+
+        [Route("privacy")]
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [Route("festival/{id}")]
+        public IActionResult Festival(string id)
+        {
+            ViewData["id"] = id;
+
+            return View();
+        }
+
+        [Route("contact")]
+        public IActionResult Contact()
+
+        {
+            return View();
+        }
+
+        [Route("contact")]
+        [HttpPost]
+        public IActionResult Contact(PersonModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            SavePerson(model);
+
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });  
+        }
+
         private List<Festival> GetFestivals()
         {
             List<Festival> festivals = new List<Festival>();
@@ -50,38 +91,19 @@ namespace SchoolTemplate.Controllers
             return festivals;
         }
 
-        [Route("privacy")]
-        public IActionResult Privacy()
+        private void SavePerson(PersonModel person)
         {
-            return View();
-        }
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam, achternaam, emailadres, geb_datum) VALUES(?voornaam, ?achternaam, ?email, ?geb_datum)", conn);
 
-        [Route("festival/{id}")]
-        public IActionResult Festival(string id)
-        {
-            ViewData["id"] = id;
-
-            return View();
-        }
-
-        [Route("contact")]
-        public IActionResult Contact()
-
-        {
-            return View();
-        }
-        
-        [Route("contact")]
-        [HttpPost]
-        public IActionResult Contact(PersonModel model)
-        {
-            return View(model);
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });  
+                cmd.Parameters.Add("?voornaam", MySqlDbType.VarChar).Value = person.voornaam;
+                cmd.Parameters.Add("?achternaam", MySqlDbType.VarChar).Value = person.achternaam;
+                cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.email;
+                cmd.Parameters.Add("?geb_datum", MySqlDbType.VarChar).Value = person.geboortedatum;
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }
