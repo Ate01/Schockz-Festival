@@ -49,6 +49,7 @@ body {
     background-position-x: center;
     background-position-y: top;
     margin: 0;
+    background: #1a4589
 }
 .footer {
   position: absolute;
