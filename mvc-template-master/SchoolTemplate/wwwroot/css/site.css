@@ -49,6 +49,7 @@ body {
     background-position-x: center;
     background-position-y: top;
     margin: 0;
+    background: #1a4589
 }
 .footer {
   position: absolute;
@@ -72,6 +73,10 @@ ul {
 li {
     display: inline;
 }
+
+    li a:hover {
+        font-size: 18px;
+    }
 
     li a {
         color: #002681;
