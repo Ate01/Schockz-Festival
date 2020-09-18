@@ -22,7 +22,11 @@ namespace SchoolTemplate.Controllers
             return View(GetFestivals());
         }       
 
-        
+        [Route("about")]
+        public IActionResult About()
+        {
+            return View();
+        }
 
         [Route("privacy")]
         public IActionResult Privacy()
