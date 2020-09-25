@@ -22,8 +22,8 @@ namespace SchoolTemplate.Controllers
             return View(GetFestivals());
         }       
 
-        [Route("about")]
-        public IActionResult About()
+        [Route("events")]
+        public IActionResult Events()
         {
             return View();
         }
