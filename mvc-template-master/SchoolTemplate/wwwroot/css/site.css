@@ -55,7 +55,7 @@ body {
     background-position-x: center;
     background-position-y: top;
     margin: 0;
-    background: #1a4589
+    background: #1a4589;
 }
 .footer {
   position: absolute;
@@ -109,4 +109,5 @@ img,figure {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 25px;
 }
