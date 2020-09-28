@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿body {
+    color: white
+}
 
-namespace SchoolTemplate.wwwroot.css
-{
-    public class events
-    {
-    }
+h2 {
+    color: red
 }
 
 p.border {
     border-style: solid;
+    color: #82b6e9;
+    margin-left: 21%;
+    margin-right: 21%;
+    height: 250px;
 }
