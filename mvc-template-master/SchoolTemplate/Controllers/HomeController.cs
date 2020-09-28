@@ -28,6 +28,12 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
+        [Route("gallery")]
+        public IActionResult Galerij()
+        {
+            return View();
+        }
+
         [Route("privacy")]
         public IActionResult Privacy()
         {
