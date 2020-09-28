@@ -41,6 +41,12 @@ html {
   min-height: 100%;
 }
 
+h1 {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    color: #c83200;
+}
+
 body {
     /* Margin bottom by footer height */
     background-image: url(https://nextfest.co.uk/wp-content/uploads/2017/05/boomtown-festival-uk-sector-6-six-stage-nextfest-1500x840.jpg);
@@ -49,7 +55,7 @@ body {
     background-position-x: center;
     background-position-y: top;
     margin: 0;
-    background: #1a4589
+    background: #1a4589;
 }
 .footer {
   position: absolute;
@@ -86,18 +92,22 @@ li {
         font-size: 20px;
     }
 
+p.solid {
+    border-style: solid;
+    position: absolute;
+    float: left;
+    margin-left: 10px;
+    height: 466px;
+    width: 253px;
+    text-align: center;
+    background-color: #82b6e9;
+    color: #002681;
+    border-radius: 25px;
+}
+
 img,figure {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-h1{
-    color: white;
-}
-
-img,logo {
-    background: url(image.png);
-    mix-blend-mode: color-dodge;
-    transform: rotate(-10.29deg);
+    border-radius: 25px;
 }
