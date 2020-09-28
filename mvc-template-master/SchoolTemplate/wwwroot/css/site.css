@@ -74,6 +74,9 @@ ul {
     margin: 0;
     padding: 0;
     text-align: center;
+    margin-left: 190px;
+    margin-right: 190px;
+    border-radius: 0px 0px 25px 25px;
 }
 
 li {
@@ -81,7 +84,7 @@ li {
 }
 
     li a:hover {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     li a {
@@ -89,7 +92,7 @@ li {
         text-decoration: none;
         display: inline-block;
         padding: 30px 65px;
-        font-size: 20px;
+        font-size: 17px;
     }
 
 p.solid {
