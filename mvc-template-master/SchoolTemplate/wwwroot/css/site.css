@@ -94,7 +94,7 @@ li {
 
 p.solid {
     border-style: solid;
-    position: fixed;
+    position: absolute;
     float: left;
     margin-left: 10px;
     height: 466px;
