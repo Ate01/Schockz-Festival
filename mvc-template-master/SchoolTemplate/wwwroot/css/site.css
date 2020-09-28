@@ -95,3 +95,9 @@ img,figure {
 h1{
     color: white;
 }
+
+img,logo {
+    background: url(image.png);
+    mix-blend-mode: color-dodge;
+    transform: rotate(-10.29deg);
+}
