@@ -56,6 +56,10 @@ body {
     background-position-y: top;
     margin: 0;
     background: #1a4589;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
 }
 .footer {
   position: absolute;
@@ -105,12 +109,5 @@ p.solid {
     text-align: center;
     background-color: #82b6e9;
     color: #002681;
-    border-radius: 25px;
-}
-
-img,figure {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 25px;
 }
