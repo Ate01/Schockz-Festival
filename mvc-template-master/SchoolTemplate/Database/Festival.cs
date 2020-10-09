@@ -4,7 +4,7 @@ namespace SchoolTemplate.Database
 {
 public class Festival
     {
-        public int Id { get; set; }
+        public int id { get; set; }
 
         public string Voornaam { get; set; }
 

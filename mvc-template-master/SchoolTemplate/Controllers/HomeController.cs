@@ -90,11 +90,11 @@ namespace SchoolTemplate.Controllers
                     {
                         Festival f = new Festival
                         {
-                            Id = Convert.ToInt32(reader["Id"]),
-                            Voornaam = reader["Voornaam"].ToString(),
-                            Achternaam = reader["Achternaam"].ToString(),
-                            Email = reader["E-mail"].ToString(),
-                            Datum = DateTime.Parse(reader["Datum"].ToString()),
+                            id = Convert.ToInt32(reader["id"]),
+                            Voornaam = reader["voornaam"].ToString(),
+                            Achternaam = reader["achternaam"].ToString(),
+                            Email = reader["email"].ToString(),
+                            Datum = DateTime.Parse(reader["geb_datum"].ToString()),
                         };
                         festivals.Add(f);
                     }
