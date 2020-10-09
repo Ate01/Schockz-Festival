@@ -91,8 +91,9 @@ namespace SchoolTemplate.Controllers
                         Festival f = new Festival
                         {
                             Id = Convert.ToInt32(reader["Id"]),
-                            Naam = reader["Naam"].ToString(),
-                            Beschrijving = reader["Beschrijving"].ToString(),
+                            Voornaam = reader["Voornaam"].ToString(),
+                            Achternaam = reader["Achternaam"].ToString(),
+                            Email = reader["E-mail"].ToString(),
                             Datum = DateTime.Parse(reader["Datum"].ToString()),
                         };
                         festivals.Add(f);
