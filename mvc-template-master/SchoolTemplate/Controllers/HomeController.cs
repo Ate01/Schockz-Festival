@@ -19,7 +19,7 @@ namespace SchoolTemplate.Controllers
             // uncomment deze regel om producten uit je database toe te voegen
             //products = GetProducts();
 
-            return View(GetFestivals());
+            return View(GetContact());
         }       
 
         [Route("events")]
@@ -75,32 +75,33 @@ namespace SchoolTemplate.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });  
         }
 
-        private List<Festival> GetFestivals()
+        private List<Contact> GetContact()
         {
-            List<Festival> festivals = new List<Festival>();
+            List<Contact> contact = new List<Contact>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from festival", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from contact", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Festival f = new Festival
+                        Contact f = new Contact
                         {
-                            Id = Convert.ToInt32(reader["Id"]),
-                            Naam = reader["Naam"].ToString(),
-                            Beschrijving = reader["Beschrijving"].ToString(),
-                            Datum = DateTime.Parse(reader["Datum"].ToString()),
+                            id = Convert.ToInt32(reader["id"]),
+                            Voornaam = reader["voornaam"].ToString(),
+                            Achternaam = reader["achternaam"].ToString(),
+                            Email = reader["email"].ToString(),
+                            Datum = DateTime.Parse(reader["geb_datum"].ToString()),
                         };
-                        festivals.Add(f);
+                        contact.Add(f);
                     }
                 }
             }
 
-            return festivals;
+            return contact;
         }
 
         private void SavePerson(PersonModel person)
@@ -108,12 +109,12 @@ namespace SchoolTemplate.Controllers
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO klant(naam, achternaam, emailadres, geb_datum) VALUES(?voornaam, ?achternaam, ?email, ?geb_datum)", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO contact(voornaam, achternaam, email, geb_datum) VALUES(?voornaam, ?achternaam, ?email, ?geb_datum)", conn);
 
                 cmd.Parameters.Add("?voornaam", MySqlDbType.VarChar).Value = person.voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.VarChar).Value = person.achternaam;
                 cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.email;
-                cmd.Parameters.Add("?geb_datum", MySqlDbType.VarChar).Value = person.geboortedatum;
+                cmd.Parameters.Add("?geb_datum", MySqlDbType.VarChar).Value = person.geb_datum;
                 cmd.ExecuteNonQuery();
             }
         }

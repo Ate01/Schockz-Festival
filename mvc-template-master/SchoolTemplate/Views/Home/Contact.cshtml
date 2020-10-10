@@ -4,29 +4,52 @@
     ViewData["Title"] = "contact";
 }
 
+    <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="~/css/contact.css" />
 </head>
-<h1>Contact</h1>
 
-@if(ViewData["formsuccess"] == "ök")
-{
-    <p>Gelukt! Bedankt voor het invullen! / Success! Thanks for filling in!</p>
-}
 
-@if (Model != null) {
-<p>
-    Your first name is @ViewData["voornaam"] <br />
-    Your last name is @ViewData["achternaam"] <br />
-</p>
-}
+<html>
+<head>
+    <title>Contact us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <div class="contact-box">
+            <div class="left">
+                <h3>
 
-<form method="post">
-    <input type="text" name="voornaam" placeholder="Voornaam" /> <br />
-    <input type="text" name="achternaam" placeholder="Achternaam" /> <br />
-    @Html.ValidationMessageFor(m => m.achternaam) <br />
-    <input type="text" name="email" placeholder="E-mail" /> <br />
-    @Html.ValidationMessageFor(m => m.email) <br />
-    <input type="datetime" name="geboortedatum" />
-    <input type="submit" value="verstuur" />
-</form>
+                    @if (ViewData["formsuccess"] == "ök")
+                    {
+                        <p>Gelukt! Bedankt voor het invullen! / Success! Thanks for filling in!</p>
+                    }
+
+                    @if (Model != null)
+                    {
+                        <p>
+                            Your first name is @ViewData["voornaam"] <br />
+                            Your last name is @ViewData["achternaam"] <br />
+                        </p>
+                    }
+                </h3>
+            </div>
+            <div class="right">
+                <h2>Contact Us</h2>
+                <form method="post">
+                    <input type="text" name="voornaam" placeholder="Voornaam" /> <br />
+                    <input type="text" name="achternaam" placeholder="Achternaam" /> <br />
+                    @Html.ValidationMessageFor(m => m.achternaam) <br />
+                    <input type="text" name="email" placeholder="E-mail" /> <br />
+                    @Html.ValidationMessageFor(m => m.email) <br />
+                    <input type="datetime" name="geboortedatum" />
+                    <input type="submit" value="verstuur" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
