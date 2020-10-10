@@ -49,17 +49,7 @@ h1 {
 
 body {
     /* Margin bottom by footer height */
-    background-image: url(https://nextfest.co.uk/wp-content/uploads/2017/05/boomtown-festival-uk-sector-6-six-stage-nextfest-1500x840.jpg);
-    background-repeat: no-repeat;
-    background-size: 1350px 650px;
-    background-position-x: center;
-    background-position-y: top;
-    margin: 0;
     background: #1a4589;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 25px;
 }
 .footer {
   position: absolute;
@@ -78,8 +68,8 @@ ul {
     margin: 0;
     padding: 0;
     text-align: center;
-    margin-left: 190px;
-    margin-right: 190px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 0px 0px 25px 25px;
 }
 
@@ -99,15 +89,56 @@ li {
         font-size: 17px;
     }
 
-p.solid {
-    border-style: solid;
-    position: absolute;
-    float: left;
-    margin-left: 10px;
-    height: 466px;
-    width: 253px;
-    text-align: center;
-    background-color: #82b6e9;
-    color: #002681;
-    border-radius: 25px;
+    ul .icon{
+        display: none;
+    }
+
+@media screen and (max-width: 600px) {
+    li a:not(:first-child) {
+        display: none;
+    }
+
+    li a.icon {
+        float: right;
+        display: block;
+    }
 }
+
+@media screen and (max-width: 600px) {
+    ul.responsive {
+        position: relative;
+    }
+
+        ul.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+    li.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    p.solid {
+        border-style: solid;
+        position: absolute;
+        float: left;
+        margin-left: 10px;
+        height: 466px;
+        width: 253px;
+        text-align: center;
+        background-color: #82b6e9;
+        color: #002681;
+        border-radius: 25px;
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border-radius: 0px 0px 25px 25px;
+    }
+}
+

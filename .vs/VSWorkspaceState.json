@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\mvc-template-master",
-    "\\mvc-template-master\\SchoolTemplate"
+    "\\mvc-template-master\\SchoolTemplate",
+    "\\mvc-template-master\\SchoolTemplate\\Controllers"
   ],
-  "SelectedNode": "\\mvc-template-master\\SchoolTemplate\\SchoolTemplate.sln",
+  "SelectedNode": "\\mvc-template-master\\SchoolTemplate\\Controllers\\HomeController.cs",
   "PreviewInSolutionExplorer": false
 }
