@@ -123,6 +123,11 @@ textarea {
     }
 }
 
-h3 {
-
+input[type="submit"] {
+    height: 30px;
+    width: 80px;
 }
+
+
+input[type="datetime"] {
+    margin-bottom: 18px;
