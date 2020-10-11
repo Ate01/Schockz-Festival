@@ -48,7 +48,7 @@ h1 {
 }
 
 body {
-     Margin bottom by footer height 
+     Margin bottom by footer height;
     background: #1a4589;
 }
 .footer {
@@ -260,4 +260,14 @@ img {
     .prev, .next, .text {
         font-size: 11px
     }
+}
+
+p.none {
+    border-style: none;
+    background-color: #82b6e9;
+    text-align: center;
+    margin: auto;
+    width: 65%;
+    border-radius: 25px;
+    padding: 20px;
 }
