@@ -19,13 +19,13 @@ namespace SchoolTemplate.Controllers
             // uncomment deze regel om producten uit je database toe te voegen
             //products = GetProducts();
 
-            return View(GetContact());
-        }       
+            return View(GetEvents());
+        }
 
         [Route("events")]
         public IActionResult Events()
         {
-            return View();
+            return View(GetEvents());
         }
 
         [Route("gallery")]
@@ -72,29 +72,31 @@ namespace SchoolTemplate.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });  
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        private List<Contact> GetContact()
+        private List<Event> GetEvents()
         {
-            List<Contact> contact = new List<Contact>();
+            List<Event> contact = new List<Event>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from contact", conn);
+                MySqlCommand cmd = new MySqlCommand("select * from event", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Contact f = new Contact
+                        Event f = new Event
                         {
                             id = Convert.ToInt32(reader["id"]),
-                            Voornaam = reader["voornaam"].ToString(),
-                            Achternaam = reader["achternaam"].ToString(),
-                            Email = reader["email"].ToString(),
-                            Datum = DateTime.Parse(reader["geb_datum"].ToString()),
+                            //Voornaam = reader["voornaam"].ToString(),
+                            //Achternaam = reader["achternaam"].ToString(),
+                            //Email = reader["email"].ToString(),
+                            //Datum = DateTime.Parse(reader["geb_datum"].ToString()),
+                            Plaats = reader["plaats"].ToString(),
+                            Datumtijd = DateTime.Parse(reader["datumtijd"].ToString()),
                         };
                         contact.Add(f);
                     }
@@ -120,3 +122,4 @@ namespace SchoolTemplate.Controllers
         }
     }
 }
+
