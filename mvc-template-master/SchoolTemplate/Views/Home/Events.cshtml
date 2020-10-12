@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using SchoolTemplate.Database;
+@model List<Event>
+@{
+    ViewData["Title"] = "Home Page";
+}
 
-<html>
-<head>
-    <link rel="stylesheet" href="~/css/events.css" />
-</head>
- <body>
 
- </body>
-</html>
+@foreach(Event e in Model)
+{
+    <p>@e.Plaats</p>
+    <p>@e.Datumtijd.ToString("yyyy-MM-dd hh:mm:ss")</p>
 
+}

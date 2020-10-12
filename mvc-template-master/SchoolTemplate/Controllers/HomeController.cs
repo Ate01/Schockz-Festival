@@ -25,7 +25,8 @@ namespace SchoolTemplate.Controllers
         [Route("events")]
         public IActionResult Events()
         {
-            return View(GetEvents());
+            var events = GetEvents();
+            return View(events);
         }
 
         [Route("gallery")]
