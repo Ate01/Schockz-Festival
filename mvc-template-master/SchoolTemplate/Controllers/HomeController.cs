@@ -92,10 +92,6 @@ namespace SchoolTemplate.Controllers
                         Event f = new Event
                         {
                             id = Convert.ToInt32(reader["id"]),
-                            //Voornaam = reader["voornaam"].ToString(),
-                            //Achternaam = reader["achternaam"].ToString(),
-                            //Email = reader["email"].ToString(),
-                            //Datum = DateTime.Parse(reader["geb_datum"].ToString()),
                             Plaats = reader["plaats"].ToString(),
                             Datumtijd = DateTime.Parse(reader["datumtijd"].ToString()),
                         };

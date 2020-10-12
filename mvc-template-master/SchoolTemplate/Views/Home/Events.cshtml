@@ -4,10 +4,11 @@
     ViewData["Title"] = "Home Page";
 }
 
-
+<body style="text-align: center; color: white">
 @foreach(Event e in Model)
 {
     <p>@e.Plaats</p>
     <p>@e.Datumtijd.ToString("yyyy-MM-dd hh:mm:ss")</p>
 
 }
+</body>

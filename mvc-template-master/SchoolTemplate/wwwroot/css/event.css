@@ -1,9 +1,10 @@
 ﻿body {
-    color: white
+    color: white;
+    text-align: center;
 }
 
 h2 {
-    color: red
+    color: red;
 }
 
 p.border {
