@@ -14,6 +14,8 @@ namespace SchoolTemplate.Models
         [EmailAddress(ErrorMessage = "Ongeldige mailadres / E-mail adress invalid")]
         public string email { get; set; }
 
+        public string commentaar { get; set; }
+
         public DateTime geb_datum { get; set; }
     }
 }

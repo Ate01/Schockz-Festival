@@ -11,7 +11,7 @@ namespace SchoolTemplate.Controllers
     public class HomeController : Controller
     {
         // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-        string connectionString = "Server=172.16.160.21;Port=3306;Database=110242;Uid=110242;Pwd=ENTypoTi;";
+        string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110242;Uid=110242;Pwd=ENTypoTi;";
 
         public IActionResult Index()
         {
@@ -108,12 +108,13 @@ namespace SchoolTemplate.Controllers
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO contact(voornaam, achternaam, email, geb_datum) VALUES(?voornaam, ?achternaam, ?email, ?geb_datum)", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO contact(voornaam, achternaam, email, geb_datum, commentaar) VALUES(?voornaam, ?achternaam, ?email, ?geb_datum, ?commentaar)", conn);
 
                 cmd.Parameters.Add("?voornaam", MySqlDbType.VarChar).Value = person.voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.VarChar).Value = person.achternaam;
                 cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.email;
                 cmd.Parameters.Add("?geb_datum", MySqlDbType.VarChar).Value = person.geb_datum;
+                cmd.Parameters.Add("?commentaar", MySqlDbType.VarChar).Value = person.commentaar;
                 cmd.ExecuteNonQuery();
             }
         }

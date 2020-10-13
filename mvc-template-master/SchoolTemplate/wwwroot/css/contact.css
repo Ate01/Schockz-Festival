@@ -89,7 +89,10 @@ h2 {
     }
 
 textarea {
-    min-height: 150px;
+    width: 262px;
+    margin-bottom: 25px;
+    margin-top: 58px;
+    margin-left: 45px;
 }
 
 .btn {
@@ -131,3 +134,5 @@ input[type="submit"] {
 
 input[type="datetime"] {
     margin-bottom: 18px;
+}
+

@@ -1,17 +1,5 @@
-﻿body {
-    color: white;
-    text-align: center;
-}
-
-h2 {
-    color: red;
-}
-
-p.border {
+﻿p.none {
     border-style: solid;
-    color: #82b6e9;
-    margin-left: 21%;
-    margin-right: 21%;
-    height: 250px;
+    color: white;
 }
 

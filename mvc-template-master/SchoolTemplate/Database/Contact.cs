@@ -13,5 +13,7 @@ public class Contact
         public DateTime Datum { get; set; }
 
         public string Email { get; set; }
-   }
+
+        public string Commentaar { get; set; }
+    }
 }
