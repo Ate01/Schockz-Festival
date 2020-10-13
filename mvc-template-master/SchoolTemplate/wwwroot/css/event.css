@@ -1,5 +1,21 @@
-﻿p.none {
+﻿
+p.border {
     border-style: solid;
-    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 70%;
+    margin-top: 50px;
+    height: 220px;
+    background-image: url(https://www.holland.com/upload_mm/2/3/f/610_fullimage_amsterdam%20koninklijkpaleis%20vrede-op-gevel.jpg.jpg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: 355px;
+    background-position-y: center;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
+    font-weight: 600;
+    color: #82b6e9;
 }
-
+}
