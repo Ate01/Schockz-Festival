@@ -11,7 +11,13 @@
 <body style="text-align: center; color: white">
     @foreach (Event e in Model)
     {
-        <p class="border">@e.Plaats<br/> 
-        @e.Datumtijd.ToString("yyyy-MM-dd HH:mm")</p>
+        <p class="border">
+            @e.Plaats<br />
+            @e.Datumtijd.ToString("yyyy-MM-dd HH:mm")
+        <br class="festival">@e.Beschrijving
+
+        </p>
+
     }
+
 </body>

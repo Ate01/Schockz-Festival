@@ -10,5 +10,8 @@ namespace SchoolTemplate.Database
 
         public DateTime Datumtijd { get; set; }
 
+        public string Beschrijving { get; set; }
+
+
     }
 }

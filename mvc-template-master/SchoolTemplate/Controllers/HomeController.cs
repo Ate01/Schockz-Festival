@@ -94,6 +94,8 @@ namespace SchoolTemplate.Controllers
                             id = Convert.ToInt32(reader["id"]),
                             Plaats = reader["plaats"].ToString(),
                             Datumtijd = DateTime.Parse(reader["datumtijd"].ToString()),
+                            Beschrijving = reader["beschrijving"].ToString(),
+
                         };
                         contact.Add(f);
                     }
