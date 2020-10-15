@@ -22,16 +22,16 @@
             <div class="left">
                 @*<h3>*@
                 <form method="post">
+                    @*@if (Model != null)*@
                     <textarea type="text" name="commentaar" placeholder="Stel hier uw vraag..." style="height:200px"></textarea><br />
                     @Html.ValidationMessageFor(m => m.commentaar) <br />
+                    @if (ViewData["formsuccess"] == "ök")
+                    {
+                        <p class="answer"> Bedankt voor het invullen!</p>
+                    }
                 </form>
 
-                    @*@if (ViewData["formsuccess"] == "ök")
-        {
-            <p>Gelukt! Bedankt voor het invullen! / Success! Thanks for filling in!</p>
-        }
-
-        @if (Model != null)
+        @*@if (Model != null)
         {
             <p>
                 Your first name is @ViewData["voornaam"] <br />
