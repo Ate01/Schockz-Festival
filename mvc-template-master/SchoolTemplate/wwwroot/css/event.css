@@ -12,14 +12,13 @@ p.border {
     background-position-x: right;
     background-size: 355px;
     background-position-y: center;
-    font-size: 20px;
+}
+/*Link naar details pagina*/
+a.link {
+    text-decoration: none;
+    font-size: 73px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-family: cursive;
     font-weight: 600;
-    color: #82b6e9;
-}
-/*Link naar details pagina*/
-a {
-    text-decoration: none;
     color: #82b6e9;
 }

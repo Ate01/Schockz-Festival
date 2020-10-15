@@ -11,11 +11,13 @@
 <body style="text-align: left; color: white">
     @foreach (Event e in Model)
     {
-        <p class="border">
-            <a href="http://localhost:56349/festival/%7Bid%7D">@e.Plaats</a><br />
+    <p class="border">
+        <a class="link" href="http://localhost:56349/festival/%7Bid%7D">
+            @e.Plaats<br />
             @e.Datumtijd.ToString("yyyy-MM-dd HH:mm")
+        </a>
 
-        </p>
+    </p>
 
     }
 
