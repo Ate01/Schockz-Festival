@@ -1,0 +1,14 @@
+﻿@using SchoolTemplate.Database;
+@model List<Event>
+@{
+    ViewData["Title"] = "Details";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/details.css" />
+</head>
+
+@foreach (Event e in Model)
+{
+<p class="border">@e.Beschrijving</p> 
+}

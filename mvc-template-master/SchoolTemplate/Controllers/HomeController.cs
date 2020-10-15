@@ -41,12 +41,12 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-        [Route("festival/{id}")]
-        public IActionResult Festival(string id)
+        [Route("details")]
+        public IActionResult Details()
         {
-            ViewData["id"] = id;
-
-            return View();
+            //ViewData["id"] = id;
+            var events = GetEvents();
+            return View(events);
         }
 
         [Route("contact")]
