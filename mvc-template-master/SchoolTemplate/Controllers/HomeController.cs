@@ -95,6 +95,7 @@ namespace SchoolTemplate.Controllers
                             Plaats = reader["plaats"].ToString(),
                             Datumtijd = DateTime.Parse(reader["datumtijd"].ToString()),
                             Beschrijving = reader["beschrijving"].ToString(),
+                            Prijs = float.Parse(reader["prijs"].ToString()),
 
                         };
                         contact.Add(f);

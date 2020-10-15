@@ -12,6 +12,7 @@ namespace SchoolTemplate.Database
 
         public string Beschrijving { get; set; }
 
+        public float Prijs { get; set; }
 
     }
 }
