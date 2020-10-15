@@ -12,9 +12,8 @@
     @foreach (Event e in Model)
     {
         <p class="border">
-            @e.Plaats<br />
+            <a href="http://localhost:56349/festival/%7Bid%7D">@e.Plaats</a><br />
             @e.Datumtijd.ToString("yyyy-MM-dd HH:mm")
-        <br class="festival">@e.Beschrijving
 
         </p>
 

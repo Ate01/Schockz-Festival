@@ -18,3 +18,8 @@ p.border {
     font-weight: 600;
     color: #82b6e9;
 }
+/*Link naar details pagina*/
+a {
+    text-decoration: none;
+    color: #82b6e9;
+}
