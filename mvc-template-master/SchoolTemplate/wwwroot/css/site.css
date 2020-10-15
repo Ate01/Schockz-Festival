@@ -1,44 +1,16 @@
 ﻿ Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. 
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
- Sticky footer styles
--------------------------------------------------- 
-html {
-  font-size: 14px;
-}
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
- Sticky footer styles
--------------------------------------------------- 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
 }
 
 h1 {
@@ -48,19 +20,10 @@ h1 {
 }
 
 body {
-     Margin bottom by footer height;
     background: #1a4589;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-   Set the fixed height of the footer here 
-  height: 60px;
-  line-height: 60px;  Vertically center the text there 
-}
 
+/*Nav bar*/
 ul {
     background-color: #82b6e9;
     border-width: 1px 0;
@@ -89,54 +52,6 @@ li {
         font-size: 17px;
     }
 
-/*    ul .icon{
-        display: none;
-    }
-
-@media screen and (max-width: 600px) {
-    li a:not(:first-child) {
-        display: none;
-    }
-
-    li a.icon {
-        float: right;
-        display: block;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    ul.responsive {
-        position: relative;
-    }
-
-        ul.responsive .icon {
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-    li.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }*/
-
-    p.solid {
-        border-style: solid;
-        position: absolute;
-        float: left;
-        margin-left: 10px;
-        height: 466px;
-        width: 253px;
-        text-align: center;
-        background-color: #82b6e9;
-        color: #002681;
-        border-radius: 25px;
-    }
-
-
-}
-
 * {
     box-sizing: border-box
 }
@@ -149,8 +64,8 @@ body {
 .mySlides {
     display: none
 }
-
-img {
+/*Afbeeldingen van silder*/
+    img {
     vertical-align: middle;
     border-radius: 0px 0px 25px 25px;
     margin-top: 8px;
@@ -262,6 +177,7 @@ img {
     }
 }
 
+/*Text border*/
 p.none {
     border-style: none;
     background-color: #82b6e9;
