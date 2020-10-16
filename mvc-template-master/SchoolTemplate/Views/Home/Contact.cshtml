@@ -18,46 +18,30 @@
 </head>
 <body>
     <div class="container">
-        <div class="contact-box">
+        <form method="post" class="contact-box">
+            
             <div class="left">
-                @*<h3>*@
-                <form method="post">
-                    @*@if (Model != null)*@
-                    <textarea type="text" name="commentaar" placeholder="Stel hier uw vraag..." style="height:200px"></textarea><br />
-                    @Html.ValidationMessageFor(m => m.commentaar) <br />
-                    @if (ViewData["formsuccess"] == "ök")
-                    {
-                        <p class="answer"> Bedankt voor het invullen!</p>
-                    }
-                </form>
-
-        @*@if (Model != null)
-        {
-            <p>
-                Your first name is @ViewData["voornaam"] <br />
-                Your last name is @ViewData["achternaam"] <br />
-            </p>
-        }*@
-
-
-
-                @*</h3>*@
+                <textarea type="text" name="commentaar" placeholder="Stel hier uw vraag..." style="height:200px"></textarea><br />
+                @Html.ValidationMessageFor(m => m.commentaar) <br />
+                @if (ViewData["formsuccess"] == "ök")
+                {
+                    <p class="answer"> Bedankt voor het invullen!</p>
+                }
             </div>
+            
             <div class="right">
                 <h2>Contact Us</h2>
-                <form method="post">
-                    <input type="text" name="voornaam" placeholder="Voornaam" /> <br />
-                    @Html.ValidationMessageFor(m => m.voornaam) <br />
-                    <input type="text" name="achternaam" placeholder="Achternaam" /> <br />
-                    @Html.ValidationMessageFor(m => m.achternaam) <br />
-                    <input type="text" name="email" placeholder="E-mail" /> <br />
-                    @Html.ValidationMessageFor(m => m.email) <br />
-                    <input type="date" name="geboortedatum" placeholder="YYYY-MM-DD" /> <br />
-                    @Html.ValidationMessageFor(m => m.geb_datum) <br />
-                    <input type="submit" value="Verstuur" />
-                </form>
+                <input type="text" name="voornaam" placeholder="Voornaam" /> <br />
+                @Html.ValidationMessageFor(m => m.voornaam) <br />
+                <input type="text" name="achternaam" placeholder="Achternaam" /> <br />
+                @Html.ValidationMessageFor(m => m.achternaam) <br />
+                <input type="text" name="email" placeholder="E-mail" /> <br />
+                @Html.ValidationMessageFor(m => m.email) <br />
+                <input type="date" name="geb_datum" placeholder="YYYY-MM-DD" /> <br />
+                @Html.ValidationMessageFor(m => m.geb_datum) <br />
+                <input type="submit" value="Verstuur" />
             </div>
-        </div>
+        </form>
     </div>
 </body>
 </html>

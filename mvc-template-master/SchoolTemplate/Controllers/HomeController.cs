@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Reflection.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using SchoolTemplate.Database;
@@ -96,7 +97,7 @@ namespace SchoolTemplate.Controllers
                             Datumtijd = DateTime.Parse(reader["datumtijd"].ToString()),
                             Beschrijving = reader["beschrijving"].ToString(),
                             Prijs = float.Parse(reader["prijs"].ToString()),
-                            Img = reader["img"].ToString()
+                            //Img = Blob.Equals(reader[""])
 
                         };
                         contact.Add(f);
@@ -117,7 +118,7 @@ namespace SchoolTemplate.Controllers
                 cmd.Parameters.Add("?voornaam", MySqlDbType.VarChar).Value = person.voornaam;
                 cmd.Parameters.Add("?achternaam", MySqlDbType.VarChar).Value = person.achternaam;
                 cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.email;
-                cmd.Parameters.Add("?geb_datum", MySqlDbType.VarChar).Value = person.geb_datum;
+                cmd.Parameters.Add("?geb_datum", MySqlDbType.Date).Value = person.geb_datum;
                 cmd.Parameters.Add("?commentaar", MySqlDbType.VarChar).Value = person.commentaar;
                 cmd.ExecuteNonQuery();
             }

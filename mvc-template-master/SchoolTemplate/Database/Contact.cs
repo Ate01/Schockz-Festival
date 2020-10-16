@@ -10,7 +10,7 @@ public class Contact
 
         public string Achternaam { get; set; }
 
-        public DateTime Datum { get; set; }
+        public DateTime geb_datum { get; set; }
 
         public string Email { get; set; }
 
