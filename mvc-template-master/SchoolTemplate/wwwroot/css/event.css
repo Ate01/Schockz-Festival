@@ -8,11 +8,11 @@ p.border {
     width: 70%;
     margin-top: 50px;
     height: 220px;
-    /*background-image: url(https://www.holland.com/upload_mm/2/3/f/610_fullimage_amsterdam%20koninklijkpaleis%20vrede-op-gevel.jpg.jpg);*/
     background-repeat: no-repeat;
     background-position-x: right;
     background-size: 355px;
     background-position-y: center;
+    padding: 16px;
 }
 /*Link naar details pagina*/
 a.link {
