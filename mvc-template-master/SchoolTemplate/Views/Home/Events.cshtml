@@ -11,9 +11,10 @@
     @foreach (Event e in Model)
     {
     <p class="border">
-        <a class="link" href="/details/@e.id">
+        <a class="link" href="/details">
             @e.Plaats<br />
             @e.Datumtijd.ToString("yyyy-MM-dd HH:mm")
+            @e.Prijs<br />
         </a>
 
     </p>
