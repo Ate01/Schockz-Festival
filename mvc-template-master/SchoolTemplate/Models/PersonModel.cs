@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SchoolTemplate.Models
 {
-    public class PersonModel
+    public class PersonModel //this public class will link to the home controller under the HttpPost of [Route("Contact")]
     {
         public string voornaam { get; set; }
 

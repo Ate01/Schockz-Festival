@@ -2,17 +2,17 @@
 
 namespace SchoolTemplate.Database
 {
-    public class Event
+    public class Event //this public class links to the public class event
     {
-        public int id { get; set; }
+        public int id { get; set; } //primary key of database, always shown as an integer
 
-        public string Plaats { get; set; }
+        public string Plaats { get; set; } //string in database
 
-        public DateTime Datumtijd { get; set; }
+        public DateTime Datumtijd { get; set; } //date and time in database
 
         public string Beschrijving { get; set; }
 
-        public float Prijs { get; set; }
+        public float Prijs { get; set; } //value of float number in database
 
         //public string Img { get; set; }
     }

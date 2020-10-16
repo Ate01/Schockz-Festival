@@ -12,7 +12,7 @@ namespace SchoolTemplate.Controllers
     public class HomeController : Controller
     {
         // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-        string connectionString = "Server=172.16.160.21;Port=3306;Database=110242;Uid=110242;Pwd=ENTypoTi;";
+        string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110242;Uid=110242;Pwd=ENTypoTi;";
 
         public IActionResult Index()
         {
@@ -23,27 +23,30 @@ namespace SchoolTemplate.Controllers
             return View(GetEvents());
         }
 
+        //The following from rows 28 to 60 are to make the webpages visible. These could vary for
+        //every website
+
         [Route("events")]
-        public IActionResult Events()
+        public IActionResult Events() //fetches events from database
         {
             var events = GetEvents();
             return View(events);
         }
 
         [Route("gallery")]
-        public IActionResult Galerij()
+        public IActionResult Galerij() //makes the gallery page visible
         {
             return View();
         }
 
         [Route("privacy")]
-        public IActionResult Privacy()
+        public IActionResult Privacy() //makes the privacy policy page visible, even though it is unnecessary at the moment
         {
             return View();
         }
 
         [Route("details")]
-        public IActionResult Details()
+        public IActionResult Details() //makes the details page visible; this page is accessible via the events page
         {
             //ViewData["id"] = id;
             var events = GetEvents();
@@ -51,7 +54,7 @@ namespace SchoolTemplate.Controllers
         }
 
         [Route("contact")]
-        public IActionResult Contact()
+        public IActionResult Contact() //makes the contact page visible
 
         {
             return View();
@@ -59,7 +62,7 @@ namespace SchoolTemplate.Controllers
 
         [Route("contact")]
         [HttpPost]
-        public IActionResult Contact(PersonModel model)
+        public IActionResult Contact(PersonModel model) //connects the contact page with the PersonModel file
         {
             if (!ModelState.IsValid)
                 return View(model);
@@ -77,7 +80,7 @@ namespace SchoolTemplate.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        private List<Event> GetEvents()
+        private List<Event> GetEvents() //from here to row 113 events will be fetched from the database
         {
             List<Event> contact = new List<Event>();
 
@@ -108,7 +111,8 @@ namespace SchoolTemplate.Controllers
             return contact;
         }
 
-        private void SavePerson(PersonModel person)
+        private void SavePerson(PersonModel person) //this private void will collect all details filled in
+                                                    //and will execute the query and add those in the database
         {
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
@@ -126,3 +130,4 @@ namespace SchoolTemplate.Controllers
     }
 }
 
+//end of cs-file
