@@ -14,5 +14,6 @@ namespace SchoolTemplate.Database
 
         public float Prijs { get; set; }
 
+        public string Img { get; set; }
     }
 }
