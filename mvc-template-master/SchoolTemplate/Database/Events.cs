@@ -17,3 +17,5 @@ namespace SchoolTemplate.Database
         //public string Img { get; set; }
     }
 }
+
+//end of cs-file

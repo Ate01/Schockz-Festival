@@ -7,7 +7,7 @@ namespace SchoolTemplate.Models
     {
         public string voornaam { get; set; }
 
-        [Required(ErrorMessage = "Achternaam is verplicht / Last name is required")] //one of three error messages that pops up when this area is not filled in, and the person presses the submit button to execute the data
+        [Required(ErrorMessage = "Achternaam is verplicht / Last name is required")] //one of three error messages that pops up when this area is not filled in, and the person presses the submit button to try to execute the data
         public string achternaam { get; set; }
 
         [Required(ErrorMessage = "Mailadres is verplicht / E-mail adress is required")]
@@ -21,3 +21,4 @@ namespace SchoolTemplate.Models
     }
 }
 
+// end of cs-file
