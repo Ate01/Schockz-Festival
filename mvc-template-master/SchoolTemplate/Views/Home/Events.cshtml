@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="~/css/event.css" />
 </head>
 
-<body style="text-align: left; color: white">
     @foreach (Event e in Model)
     {
     <p class="border">
-        <a class="link" href="http://localhost:56349/details">
+        <a class="link" href="/details/@e.id">
             @e.Plaats<br />
             @e.Datumtijd.ToString("yyyy-MM-dd HH:mm")
         </a>
@@ -20,5 +19,3 @@
     </p>
 
     }
-
-</body>
