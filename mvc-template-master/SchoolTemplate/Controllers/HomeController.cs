@@ -100,7 +100,7 @@ namespace SchoolTemplate.Controllers
                             Datumtijd = DateTime.Parse(reader["datumtijd"].ToString()),
                             Beschrijving = reader["beschrijving"].ToString(),
                             Prijs = float.Parse(reader["prijs"].ToString()),
-                            //Img = Blob.Equals(reader[""])
+                            //Img = reader["img"].ToString(),
 
                         };
                         contact.Add(f);
