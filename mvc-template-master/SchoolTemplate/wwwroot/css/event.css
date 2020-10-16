@@ -17,9 +17,33 @@ p.border {
 /*Link naar details pagina*/
 a.link {
     text-decoration: none;
-    font-size: 46px;
+    font-size: 41px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-family: cursive;
     font-weight: 600;
     color: #82b6e9;
 }
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 230px;
+    border-radius: 25px;
+}
+
+.button1 {
+    background-color: #c83200;
+    color: #82b6e9;
+    border: 2px solid #c83200;
+}
+
+    .button1:hover {
+        background-color: #1a4589;
+        color: #c83200;

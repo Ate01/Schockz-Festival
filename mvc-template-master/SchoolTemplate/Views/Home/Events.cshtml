@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="~/css/event.css" />
 </head>
 
-    @foreach (Event e in Model)
-    {
+@foreach (Event e in Model)
+{
     <p class="border" style="border-radius: 25px">
         <a class="link" href="/details">
             @e.Plaats<br />
@@ -17,6 +17,8 @@
             €@e.Prijs<br />
         </a>
 
-    </p>
 
-    }
+    </p>
+    <button class="button button1">Bestel Hier!</button>
+
+}

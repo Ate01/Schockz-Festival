@@ -66,11 +66,11 @@ body {
     display: none
 }
 /*Afbeeldingen van silder*/
-    img {
+img {
     vertical-align: middle;
     border-radius: 0px 0px 25px 25px;
     margin-top: 8px;
-    height: 400px;
+    height: 450px;
 }
 
 /* Slideshow container */
