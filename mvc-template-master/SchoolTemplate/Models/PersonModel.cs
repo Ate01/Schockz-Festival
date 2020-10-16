@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.SqlServer.Query.ExpressionTranslators.Internal;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace SchoolTemplate.Models
@@ -18,6 +19,15 @@ namespace SchoolTemplate.Models
 
         public string commentaar { get; set; }
 
+        public bool leeg
+        {
+            get
+            {
+                return (string.IsNullOrWhiteSpace(voornaam) &&
+                        string.IsNullOrWhiteSpace(achternaam) &&
+                        string.IsNullOrWhiteSpace(email));
+            }
+        }
     }
 }
 
